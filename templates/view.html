@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submitted Feedback</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Submitted Feedback</h1>
+
+    {% if feedbacks %}
+        <ul>
+        {% for fb in feedbacks %}
+            <li><strong>{{ fb[1] }}</strong>: {{ fb[2] }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No feedback submitted yet.</p>
+    {% endif %}
+
+    <a href="/">Go Back</a>
+</body>
+</html>
+ 
